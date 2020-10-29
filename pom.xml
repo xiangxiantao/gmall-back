@@ -11,6 +11,15 @@
 
     <modules>
         <module>gmall-admin</module>
+        <module>gmall-coupon</module>
+        <module>gmall-ware</module>
+        <module>gmall-product</module>
+        <module>gmall-member</module>
+        <module>gmall-order</module>
+        <module>renren-generator</module>
+        <module>gmall-common</module>
+
+
     </modules>
 
 </project>

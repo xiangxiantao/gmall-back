@@ -1,0 +1,20 @@
+package com.xxt.gmall.coupon.service;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.xxt.common.utils.PageUtils;
+import com.xxt.gmall.coupon.entity.SkuLadderEntity;
+
+import java.util.Map;
+
+/**
+ * 商品阶梯价格
+ *
+ * @author xxt
+ * @email 1067301216@qq.com
+ * @date 2020-10-30 00:50:18
+ */
+public interface SkuLadderService extends IService<SkuLadderEntity> {
+
+    PageUtils queryPage(Map<String, Object> params);
+}
+
