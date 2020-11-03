@@ -5,11 +5,7 @@ import java.util.Map;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.xxt.gmall.coupon.entity.CouponEntity;
 import com.xxt.gmall.coupon.service.CouponService;
@@ -31,11 +27,17 @@ public class CouponController {
     @Autowired
     private CouponService couponService;
 
+    @GetMapping("/member/coupon")
+    public R getMembersAllCoupon(){
+        CouponEntity couponEntity = new CouponEntity();
+        couponEntity.setCouponName("满减");
+        return R.ok().put("coupons", Arrays.asList(couponEntity));
+    }
+
     /**
      * 列表
      */
     @RequestMapping("/list")
-
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = couponService.queryPage(params);
 
