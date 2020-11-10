@@ -5,6 +5,8 @@ import java.util.Map;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import com.xxt.gmall.coupon.entity.CouponEntity;
@@ -23,9 +25,25 @@ import com.xxt.common.utils.R;
  */
 @RestController
 @RequestMapping("coupon/coupon")
+@RefreshScope
 public class CouponController {
     @Autowired
     private CouponService couponService;
+
+    @Value("${coupon.name}")
+    private String name;
+
+    @Value("${coupon.count}")
+    private Integer count;
+
+
+    @GetMapping("/sm")
+    public R getSm(){
+        CouponEntity couponEntity = new CouponEntity();
+        couponEntity.setCouponName("满减");
+        return R.ok().put("name", name).put("count", count);
+    }
+
 
     @GetMapping("/member/coupon")
     public R getMembersAllCoupon(){
