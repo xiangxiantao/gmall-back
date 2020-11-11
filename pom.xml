@@ -18,6 +18,7 @@
         <module>gmall-order</module>
         <module>renren-generator</module>
         <module>gmall-common</module>
+        <module>gamll-gatway</module>
 
 
     </modules>
