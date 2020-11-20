@@ -11,3 +11,22 @@ spring:
           uri: http://www.qq.com
           predicates:
             - Query=url, qq
+
+        - id: product_route
+          uri: lb://gmall-product
+          predicates:
+            - Path=/api/product/**
+          filters:
+            #路径重写
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
+
+        - id: admin_route
+          uri: lb://gmall-admin
+          predicates:
+            - Path=/api/**
+          filters:
+            #路径重写
+            - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}
+
+

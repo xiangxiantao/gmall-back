@@ -1,6 +1,7 @@
 package com.xxt.gmall.product.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import com.xxt.common.utils.R;
@@ -31,10 +32,19 @@ public class CategoryController {
     private CategoryService categoryService;
 
     /**
+     * 树型结构的列表
+     */
+    @RequestMapping("/list/tree")
+    public R treeList(){
+        List<CategoryEntity> listWithTree = categoryService.listWithTree();
+
+        return R.ok().put("data", listWithTree);
+    }
+
+    /**
      * 列表
      */
     @RequestMapping("/list")
-
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = categoryService.queryPage(params);
 
@@ -46,7 +56,6 @@ public class CategoryController {
      * 信息
      */
     @RequestMapping("/info/{catId}")
-
     public R info(@PathVariable("catId") Long catId){
 		CategoryEntity category = categoryService.getById(catId);
 
