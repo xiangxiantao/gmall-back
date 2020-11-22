@@ -66,7 +66,6 @@ public class CategoryController {
      * 保存
      */
     @RequestMapping("/save")
-
     public R save(@RequestBody CategoryEntity category){
 		categoryService.save(category);
 
@@ -88,10 +87,9 @@ public class CategoryController {
      * 删除
      */
     @RequestMapping("/delete")
-
     public R delete(@RequestBody Long[] catIds){
-		categoryService.removeByIds(Arrays.asList(catIds));
-
+        categoryService.removeMenuByIds(Arrays.asList(catIds));
+		//categoryService.removeByIds(Arrays.asList(catIds));
         return R.ok();
     }
 

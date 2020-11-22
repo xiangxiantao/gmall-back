@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gmall-ware" />
+        <module name="gamll-gatway" />
+        <module name="gmall-member" />
+        <module name="gmall-admin" />
+        <module name="gmall-product" />
+        <module name="gmall-order" />
+        <module name="gmall-coupon" />
+        <module name="renren-generator" />
+        <module name="gmall-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gamll-gatway" target="1.8" />
+      <module name="gmall-admin" target="1.8" />
+      <module name="gmall-back" target="1.8" />
+      <module name="gmall-common" target="1.8" />
+      <module name="gmall-coupon" target="1.8" />
+      <module name="gmall-member" target="1.8" />
+      <module name="gmall-order" target="1.8" />
+      <module name="gmall-product" target="1.8" />
+      <module name="gmall-ware" target="1.8" />
+      <module name="renren-generator" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gamll-gatway" options="-parameters" />
+      <module name="gmall-admin" options="-parameters" />
+      <module name="gmall-coupon" options="-parameters" />
+      <module name="gmall-member" options="-parameters" />
+      <module name="gmall-order" options="-parameters" />
+      <module name="gmall-product" options="-parameters" />
+      <module name="gmall-ware" options="-parameters" />
+      <module name="renren-generator" options="-parameters" />
+    </option>
+  </component>
+</project>

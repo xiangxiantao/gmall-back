@@ -3,6 +3,7 @@ package com.xxt.gmall.product.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -48,6 +49,12 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         return tree;
     }
 
+    @Override
+    public void removeMenuByIds(List<Long> catIds) {
+        //todo 检查当前删除的菜单是否被别的地方引用
+        baseMapper.deleteBatchIds(catIds);
+    }
+
     /**
      * 递归查找所有菜单的子菜单
      * @param root
@@ -56,7 +63,7 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
      */
     private List<CategoryEntity> getChildrens(CategoryEntity root, List<CategoryEntity> all) {
         List<CategoryEntity> collect = all.stream()
-                .filter(categoryEntity -> categoryEntity.getParentCid() == root.getCatId())
+                .filter(categoryEntity -> categoryEntity.getParentCid().equals(root.getCatId()))
                 .map(categoryEntity -> {
                     categoryEntity.setChildren(getChildrens(categoryEntity, all));
                     return categoryEntity;

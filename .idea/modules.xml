@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gamll-gatway/gamll-gatway.iml" filepath="$PROJECT_DIR$/gamll-gatway/gamll-gatway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-admin/gmall-admin.iml" filepath="$PROJECT_DIR$/gmall-admin/gmall-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/gmall-back.iml" filepath="$PROJECT_DIR$/.idea/gmall-back.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-common/gmall-common.iml" filepath="$PROJECT_DIR$/gmall-common/gmall-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-coupon/gmall-coupon.iml" filepath="$PROJECT_DIR$/gmall-coupon/gmall-coupon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-member/gmall-member.iml" filepath="$PROJECT_DIR$/gmall-member/gmall-member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-order/gmall-order.iml" filepath="$PROJECT_DIR$/gmall-order/gmall-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-product/gmall-product.iml" filepath="$PROJECT_DIR$/gmall-product/gmall-product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-ware/gmall-ware.iml" filepath="$PROJECT_DIR$/gmall-ware/gmall-ware.iml" />
+      <module fileurl="file://$PROJECT_DIR$/renren-generator/renren-generator.iml" filepath="$PROJECT_DIR$/renren-generator/renren-generator.iml" />
+    </modules>
+  </component>
+</project>
